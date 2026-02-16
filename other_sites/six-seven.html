@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <title>SIX SEVEN</title>
+    <style>
+      #wrapper{
+        position:absolute;
+        left:0px;
+        top:0px;
+      }
+      .msg{
+        position:absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper"></div>
+    <script>
+      let delay=1600;
+      let size=15;
+      function loop(){
+        let el=document.createElement('div')
+        el.classList.add('msg')
+        el.style.fontSize=size+'px'
+        el.style.left=Math.random()*screen.width+'px'
+        el.style.top=Math.random()*screen.height+'px'
+        delay-=delay<=100 ? 0 : 100
+        size+=size>=40 ? 0 : 1
+        setTimeout(loop,delay)
+      }
+      loop()
+    </script>
+  </body>
+</html>
