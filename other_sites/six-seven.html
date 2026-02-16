@@ -27,7 +27,7 @@
         el.style.top=Math.random()*screen.height+'px'
         document.getElementById('wrapper').appendChild(el)
         delay-=delay<=100 ? (delay<=1 ? 0 : 1) : 100
-        size+=size>=80 ? 0 : 1
+        size+=size>=160 ? 0 : 1
         setTimeout(loop,delay)
       }
       loop()
