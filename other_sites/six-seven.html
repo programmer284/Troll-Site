@@ -24,6 +24,7 @@
         el.style.fontSize=size+'px'
         el.style.left=Math.random()*screen.width+'px'
         el.style.top=Math.random()*screen.height+'px'
+        document.getElementById('wrapper').appendChild(el)
         delay-=delay<=100 ? 0 : 100
         size+=size>=40 ? 0 : 1
         setTimeout(loop,delay)
