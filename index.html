@@ -19,6 +19,7 @@
     <p><a href="./other_sites/troll_site.html">Link 6</a></p>
     <p><a href="./other_sites/six-seven.html">Link 7</a></p>
     <p><a href="javascript:playMemeSound()">Link 8</a></p>
+    <p><a href="javascript:startDisco(0);changeLink()" id="DL">Link 9 (SEIZURE WARNING!)</a></p>
   </body>
   <script>
     let audio=document.createElement('audio')
@@ -27,6 +28,17 @@
     function playMemeSound(){
       audio.currentTime=0
       audio.play()
+    }
+    function startDisco(h){
+      document.body.style.color='hsl('+h+', 100%, 50%)'
+      if(h>=360000){
+        requestAnimationFrame(()=>{startDisco(0)})
+      }else{
+        requestAnimationFrame(()=>{startDisco(h+1)})
+      }
+    }
+    function changeLink(){
+      document.getElementById('DL').innerHTML='DISCOOOO!!!'
     }
   </script>
 </html>
