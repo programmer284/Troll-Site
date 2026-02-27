@@ -30,11 +30,11 @@
       audio.play()
     }
     function startDisco(h){
-      document.body.style.color='hsl('+h+', 100%, 50%)'
+      document.body.style.backgroundColor='hsl('+h+', 100%, 50%)'
       if(h>=360000){
         requestAnimationFrame(()=>{startDisco(0)})
       }else{
-        requestAnimationFrame(()=>{startDisco(h+1)})
+        requestAnimationFrame(()=>{startDisco(h+50)})
       }
     }
     function changeLink(){
