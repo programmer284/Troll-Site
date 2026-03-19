@@ -4,7 +4,7 @@
 <title>Please wait.</title>
 </head>
 <body>
-<progress id="prog" min="0" max="100" value="0"/><br>
+<progress id="prog" min="0" max="100" value="0"></progress><br>
 <span id="lProg">Loading...</span>&nbsp;<span id="lNum"></span>
 <script>
 let progress=document.getElementById('prog')
@@ -12,7 +12,7 @@ let loading=document.getElementById('lProg')
 let num=document.getElementById('lNum')
 setInterval(()=>{loading.innerHTML=loading.innerHTML.length>=10 ? 'Loading' : loading.innerHTML+'.'},500)
 function startProg(){
-  let summand=parseInt(Math.random()*20)-10
+  let summand=parseInt(Math.random()*20)-5
   if(parseInt(progress.value)+summand>99){
     progress.value='99'
     num.innerHTML=progress.value+'%'
@@ -21,7 +21,7 @@ function startProg(){
     progress.value=''+(parseInt(progress.value)+summand)
   }
   num.innerHTML=progress.value+'%'
-  setTimeout(startProg,parseInt(Math.random()*3000)+2000)
+  setTimeout(startProg,parseInt(Math.random()*1500)+1000)
 }
 startProg()
 </script>
