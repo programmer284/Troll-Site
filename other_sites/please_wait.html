@@ -21,7 +21,7 @@ function startProg(){
     progress.value=''+(parseInt(progress.value)+summand)
   }
   num.innerHTML=progress.value+'%'
-  setTimeout(startProg,parseInt(Math.random()*1500)+1000)
+  setTimeout(startProg,parseInt(Math.random()*3000)+20*parseInt(progress.value))
 }
 startProg()
 </script>
