@@ -2,10 +2,20 @@
 <html>
 <head>
 <title>Please wait.</title>
+<style>
+#wrapper{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+</style>
 </head>
 <body>
+<div id="wrapper">
 <progress id="prog" min="0" max="100" value="0"></progress><br>
 <span id="lProg">Loading...</span>&nbsp;<span id="lNum"></span>
+</div>
 <script>
 let progress=document.getElementById('prog')
 let loading=document.getElementById('lProg')
