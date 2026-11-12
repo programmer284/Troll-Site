@@ -9,7 +9,7 @@
     </style>
   </head>
   <body>
-    <h1>Troll Site</h1>
+    <h1 id="headtitle">Troll Site</h1>
     <p>You will find various Weblinks here.</p>
     <p><a href="./other_sites/rickroll.html" target="_blank">Link 1</a></p>
     <p><a href="javascript:document.body.requestFullscreen()">Link 2</a></p>
@@ -39,6 +39,7 @@
       document.getElementById('moaiLink').innerHTML='&#x1f5ff;'.repeat(30)
       audio2.currentTime=0
       audio2.play()
+      setTimeout(()=>{document.getElementById('headtitle').innerHTML='&#x1f5ff;'.repeat(10)},3000)
     }
     function startDisco(h){
       document.body.style.backgroundColor='hsl('+h+', 100%, 50%)'
