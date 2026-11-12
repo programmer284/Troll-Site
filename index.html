@@ -20,16 +20,25 @@
     <p><a href="./other_sites/six-seven.html">Link 7</a></p>
     <p><a href="javascript:playMemeSound()">Link 8</a></p>
     <p><a href="javascript:startDisco(0);changeLink()" id="DL">Link 9 (SEIZURE WARNING!)</a></p>
-    <p><a href="javascript:close()">Link 10</a></p>
+    <p><a href="javascript:close()" id="moaiLink">Link 10</a></p>
     <p><a href="./other_sites/please_wait.html">Link 11</a></p>
   </body>
   <script>
     let audio=document.createElement('audio')
     audio.src='./assets/cat-laughing-meme.mp3'
     audio.load()
+    let audio2=document.createElement('audio')
+    audio2.src='./assets/moai_sound.mp3'
+    audio2.loop=true
+    audio2.load()
     function playMemeSound(){
       audio.currentTime=0
       audio.play()
+    }
+    function wakeMoai(){
+      document.getElementById('moaiLink').innerHTML='&#x1f5ff;'.repeat(30)
+      audio2.currentTime=0
+      audio2.play()
     }
     function startDisco(h){
       document.body.style.backgroundColor='hsl('+h+', 100%, 50%)'
